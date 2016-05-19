@@ -1,5 +1,5 @@
 {
-  "name": "geojson.io",
+  "name": "forked geojson.io",
   "version": "0.1.1",
   "description": "create and edit maps, on the internet",
   "main": "index.html",
@@ -55,12 +55,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mapbox/geojson.io.git"
+    "url": "https://github.com/ll911/geojson.io.git"
   },
   "author": "MapBox",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/mapbox/geojson.io/issues"
+    "url": "https://github.com/ll911/geojson.io/issues"
   },
   "window": {
     "toolbar": false
