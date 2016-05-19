@@ -4,8 +4,8 @@ module.exports = function(hostname) {
     if (hostname === 'geojson.io') {
         L.mapbox.config.FORCE_HTTPS = true;
         return {
-            client_id: '62c753fd0faf18392d85',
-            gatekeeper_url: 'https://geojsonioauth.herokuapp.com'
+            client_id: '248cce2a588d6f60f160',
+            gatekeeper_url: 'https://gatekeeper.pathfinder.gov.bc.ca'
         };
     // Customize these settings for your own development/deployment
     // version of geojson.io.
@@ -16,8 +16,8 @@ module.exports = function(hostname) {
         L.mapbox.config.REQUIRE_ACCESS_TOKEN = true;
         return {
             GithubAPI: null,
-            client_id: 'bb7bbe70bd1f707125bc',
-            gatekeeper_url: 'https://localhostauth.herokuapp.com'
+            client_id: '248cce2a588d6f60f160',
+            gatekeeper_url: 'https://gatekeeper.pathfinder.gov.bc.ca'
         };
     }
 };
