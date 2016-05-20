@@ -13,7 +13,7 @@ RUN \
   && DEBIAN_FRONTEND=noninteractive apt-get clean \  
   && rm -Rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN git clone https://github.com/ll911/geojson.io.git /tmp/repo1 && cp -r /tmp/repo1/* /usr/src/app && rm -Rf /tmp/repo1
+ADD . /usr/src/app
 RUN npm install
 RUN make
 RUN useradd -ms /bin/bash geojsonio \
