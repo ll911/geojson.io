@@ -23,4 +23,4 @@ RUN useradd -ms /bin/bash geojsonio \
 USER geojsonio
 WORKDIR /usr/src/app
 EXPOSE 8080
-CMD serve -p 8080
+CMD serve -C -D -p 8080 --compress
