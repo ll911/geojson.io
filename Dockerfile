@@ -1,4 +1,4 @@
-FROM node:onbuild
+FROM node:latest
 MAINTAINER leo.lou@gov.bc.ca
 
 RUN \
