@@ -12,7 +12,7 @@ RUN npm install
 RUN make
 RUN useradd -ms /bin/bash geojsonio \
   && chown -R geojsonio:0 /opt/app \
-  && chmod -R 770 /opt/app-root
+  && chmod -R 770 /opt/app
 
 USER geojsonio
 WORKDIR /opt/app
