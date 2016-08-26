@@ -28,7 +28,7 @@ RUN yum install -y centos-release-scl-rh && \
 
 ADD . /opt/app-root
 RUN git config --global url.https://github.com/.insteadOf git://github.com/ \
-  && npm install -g serve browserify \
+  && npm install -g serve browserify
 RUN npm install
 RUN make
 
