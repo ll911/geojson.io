@@ -31,7 +31,7 @@ ADD . /opt/app-root
 RUN git config --global url.https://github.com/.insteadOf git://github.com/ \
   && npm install -g serve browserify
 RUN npm install
-RUN make
+RUN cd /opt/app-root && make
 
 RUN chown -R 1001:0 /opt/app-root && chmod -R ug+rwx /opt/app-root
 USER 1001
