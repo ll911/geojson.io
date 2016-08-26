@@ -3,6 +3,8 @@ MAINTAINER leo.lou@gov.bc.ca
 
 
 ADD . /opt/app-root
+RUN git config --global url.https://github.com/.insteadOf git://github.com/ \
+  && npm install -g serve browserify \
 RUN npm install
 RUN make
 RUN useradd -ms /bin/bash geojsonio \
