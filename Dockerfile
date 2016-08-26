@@ -6,9 +6,9 @@ MAINTAINER leo.lou@gov.bc.ca
 #RUN curl -sL https://rpm.nodesource.com/setup_4.x | bash -
 #RUN yum -y install centos-release-scl-rh nodejs npm --enablerepo=epel && yum -y install gcc-c++ make git
 ENV NODEJS_VERSION=4 \
-    NPM_RUN=start \
-    NPM_CONFIG_PREFIX=$HOME/.npm-global \
-    PATH=$HOME/node_modules/.bin/:$HOME/.npm-global/bin/:$PATH
+#    NPM_RUN=start \
+#    NPM_CONFIG_PREFIX=$HOME/.npm-global \
+#    PATH=$HOME/node_modules/.bin/:$HOME/.npm-global/bin/:$PATH
 
 LABEL summary="Platform for building and running Node.js 4 applications" \
       io.k8s.description="Platform for building and running Node.js 4 applications" \
