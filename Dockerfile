@@ -1,4 +1,4 @@
-FROM rhscl/s2i-base-rhel7
+FROM openshift/base-centos7
 MAINTAINER leo.lou@gov.bc.ca
 
 ENV NODEJS_VERSION=4 \
@@ -15,16 +15,7 @@ LABEL summary="Platform for building and running Node.js 4 applications" \
       com.redhat.deployments-dir="/opt/app-root/src" \
       com.redhat.dev-mode.port="DEBUG_PORT:5858"
 
-# Labels consumed by Red Hat build service
-LABEL com.redhat.component="rh-nodejs4-docker" \
-      name="rhscl/nodejs-4-rhel7" \
-      version="4" \
-      release="1" \
-      architecture="x86_64"
-
-RUN yum-config-manager --enable rhel-server-rhscl-7-rpms && \
-    yum-config-manager --enable rhel-7-server-optional-rpms && \
-    yum-config-manager --disable epel >/dev/null || : && \
+RUN yum install -y centos-release-scl-rh && \
     INSTALL_PKGS="rh-nodejs4 rh-nodejs4-npm rh-nodejs4-nodejs-nodemon nss_wrapper" && \
     ln -s /usr/lib/node_modules/nodemon/bin/nodemon.js /usr/bin/nodemon && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
