@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.4
+FROM mhart/alpine-node:6.4.0
 MAINTAINER leo.lou@gov.bc.ca
 
 RUN mkdir /app
