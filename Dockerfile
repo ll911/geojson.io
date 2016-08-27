@@ -12,6 +12,7 @@ RUN git config --global url.https://github.com/.insteadOf git://github.com/ \
   && npm install -g serve browserify
 RUN npm install
 RUN make
+RUN apk del --purge alpine-sdk 'python<3'
 
 RUN adduser -S geojsonio
 RUN chown -R geojsonio:0 /app && chmod -R 770 /app
