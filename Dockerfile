@@ -2,8 +2,8 @@ FROM ruby:2.3.0-alpine
 MAINTAINER leo.lou@gov.bc.ca
 
 RUN apk update \
-  && apk add libpq libgcc ca-certificates make gcc git \
-  libc-dev libffi-dev nodejs 'python<3' zlib-dev libxml2 libxml2-dev libxslt libxslt-dev
+  && apk add alpine-sdk \
+  nodejs 'python<3'
 
 RUN mkdir /app
 WORKDIR /app
