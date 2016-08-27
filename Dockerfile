@@ -2,8 +2,8 @@ FROM ruby:2.3.0-alpine
 MAINTAINER leo.lou@gov.bc.ca
 
 RUN apk update \
-  PKG = "libpq libgcc ca-certificates make gcc git libc-dev libffi-dev nodejs 'python<3' zlib-dev libxml2 libxml2-dev libxslt libxslt-dev" \
-  && apk add $PKG
+  && apk add libpq libgcc ca-certificates make gcc git \
+  libc-dev libffi-dev nodejs 'python<3' zlib-dev libxml2 libxml2-dev libxslt libxslt-dev
 
 RUN mkdir /app
 WORKDIR /app
