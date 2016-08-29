@@ -1,4 +1,4 @@
-FROM ruby:2.3.0-alpine
+FROM alpine:3.4
 MAINTAINER leo.lou@gov.bc.ca
 
 RUN apk update \
